@@ -11,12 +11,12 @@ function login() {
             <form>
                 <h2>Login</h2>
                 <div className="input-box">
-                    <span className="icon"><Mail /></span>
+                    <span className="icon"><Mail color={'#ffffff'}/></span>
                     <input type="email" required/>
                     <label>Email</label>
                 </div>
                 <div className="input-box">
-                        <span className="icon"><LockClosed/></span>
+                        <span className="icon"><LockClosed color={'#ffffff'}/></span>
                         <input type="password" required/>
                         <label>Password</label>
                 </div>
@@ -24,7 +24,7 @@ function login() {
                     <label><input type="checkbox"/>Remember me</label>
                     <a>Forgot Password</a>
                 </div>
-                <Link to='/dashboard'><button type="submit">Login</button></Link>
+                <Link to='/home'><button className='loginbtn' type="submit">Login</button></Link>
                 <div className="register-link">
                     <p>Dont't have an account?<Link to='/register'>Register</Link></p>
                 </div>

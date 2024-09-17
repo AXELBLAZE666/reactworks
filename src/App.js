@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router , Routes , Route } from 'react-router-dom' 
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Login from './components/login';
@@ -9,34 +9,54 @@ import Home from './components/home';
 import About from './components/about';
 import Contact from './components/contact';
 import Services from './components/services';
+import Gamingpc from './pages/gamingpc';
 import { Col, Row } from 'react-bootstrap';
 import Sidenav from './components/sidenav';
+import { ClassNames } from '@emotion/react';
+import SingleItem from './pages/singleitem';
+import Cart from './pages/cart';
 
 function App() {
-  const location = useLocation();
+  return (
+    <Router>
+      <RouteHandler />
+    </Router>
+  );
+}
 
-  // Check if the current path is the login path
-  const isLoginPage = location.pathname === '/login';
+function RouteHandler() {
+  const location = useLocation();
+  const isAuthPage = ['/', '/register'].includes(location.pathname);
+
   return (
     <div>
-      <Router>
+      {!isAuthPage && (
         <Row>
-            <Col sm={2}>
-              <Sidenav/>
-            </Col>
-          </Row>
+          <Col sm={2}>
+            <Sidenav />
+          </Col>
+          <Col sm={10}>
+            <Routes>
+              <Route path='/dashboard' element={<Dashboard />} />
+              <Route path='/home' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/services' element={<Services />} />
+              <Route path='/gamingpc' element={<Gamingpc />} />
+              <Route path='/gamingpc/:id' element={<SingleItem />} />
+              <Route path='/cart' element={<Cart />} />
+            </Routes>
+          </Col>
+        </Row>
+      )}
+      {isAuthPage && (
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/services' element={<Services />} />
         </Routes>
-      </Router>
+      )}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
