@@ -51,7 +51,7 @@ function RouteHandler() {
       )}
       {isAuthPage && (
         <Routes>
-          <Route path='/' element={<Login />} />
+          <Route path='/reactworks' element={<Login />} />
           <Route path='/register' element={<Register />} />
         </Routes>
       )}
