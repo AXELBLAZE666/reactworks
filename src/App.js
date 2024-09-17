@@ -26,7 +26,7 @@ function App() {
 
 function RouteHandler() {
   const location = useLocation();
-  const isAuthPage = ['/', '/register'].includes(location.pathname);
+  const isAuthPage = ['/reactworks', '/register'].includes(location.pathname);
 
   return (
     <div>

@@ -53,7 +53,7 @@ function register() {
                     <label><input type="checkbox"/>Remember me</label>
                     <a>Forgot Password</a>
                 </div>
-                <Link to='/'><button className='loginbtn' type="submit">Register</button></Link>
+                <Link to='/reactworks'><button className='loginbtn' type="submit">Register</button></Link>
             </form>
         </div>
     </section>
