@@ -10,14 +10,18 @@ import '../App.css';
           <>
             <navbar>
               <div className='sideNav'>
-                <h1 href="#home">Navbar</h1>
+                <div><h1 href="#home">Navbar</h1></div>
                 <ul>
                   <li><Link to="/home">Home</Link></li>
                   <li><Link to="/about">About</Link></li>
                   <li><Link to="/aervices">Services</Link></li>
                   <li><Link to="/contact">Contact</Link></li>
-                  <li><Link to="/cart"><CartOutline color={'#ffffff'}/></Link></li>
+                  <li></li>
                 </ul>
+                <div>
+                <Link to="/cart"><CartOutline color={'#ffffff'}/></Link>
+                <Link to='/reactworks'><h2>signout</h2></Link>
+                </div>
               </div>
             </navbar>
           </>

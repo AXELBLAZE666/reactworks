@@ -145,16 +145,31 @@ h2{
 
 .sideNav{
     position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
     height: 100vh;
     background-color: #0F0F0F;
     top: 0;
     left: 0;
     bottom: 0;
+    justify-content: space-between;
+    align-items: center;
 }
- .sideNav ul li Link {
+ .sideNav ul a {
     color: #fff;
     text-decoration: none;
     padding-top: 20px;
+    font-size: 25px;
+   
+ }
+
+ .sideNav ul li{
+    list-style: none;
+ }
+
+ .sideNav ul li :hover{
+    color: blue;
  }
 
  .maindata{
