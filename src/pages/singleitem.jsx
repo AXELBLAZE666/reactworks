@@ -18,12 +18,13 @@ function SingleItem() {
 
   const addToCart = () => {
     const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-    const discountedPrice = Number(product.price);
+    const Price = Number(product.price);
   
     const newItem = {
+      image : product.image,
       id: product.id,  
-      name: product.ProductName,
-      price: discountedPrice,  
+      name: product.name,
+      price: Price,  
     };
   
     cartItems.push(newItem);
@@ -39,7 +40,7 @@ function SingleItem() {
         <p>ID: {product.id}</p>
         <p>Name: {product.name}</p>
         <p>Price: {product.price}</p>
-        <button onClick={addToCart()}>Add to cart</button>
+        <button onClick={addToCart}>Add to cart</button>
         </div>
       </div>
   );

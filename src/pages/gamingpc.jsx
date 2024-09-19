@@ -14,7 +14,7 @@ function gamingpc() {
                         <img className='product-images' src={e.image} alt="" />
                         <p>{e.id}</p>
                         <p>{e.name}</p>
-                        <p>{e.Price}</p>
+                        <p>{e.price}</p>
                     </Link>
                     </div>
                     
