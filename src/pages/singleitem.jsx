@@ -16,6 +16,22 @@ function SingleItem() {
     return <p>Product not found</p>;
   }
 
+  const addToCart = () => {
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    const discountedPrice = Number(product.price);
+  
+    const newItem = {
+      id: product.id,  
+      name: product.ProductName,
+      price: discountedPrice,  
+    };
+  
+    cartItems.push(newItem);
+  
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    alert(`${newItem.name} added to cart!`);
+  };
+
   return (
     <div>
       <img src={product.image} alt={product.name} />
@@ -23,7 +39,7 @@ function SingleItem() {
         <p>ID: {product.id}</p>
         <p>Name: {product.name}</p>
         <p>Price: {product.price}</p>
-        <button>Add to cart</button>
+        <button onClick={addToCart()}>Add to cart</button>
         </div>
       </div>
   );
