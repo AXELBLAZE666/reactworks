@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reactworks/static/css/main.33feb697.css",
-    "main.js": "/reactworks/static/js/main.afd1af4f.js",
+    "main.css": "/reactworks/static/css/main.accaf217.css",
+    "main.js": "/reactworks/static/js/main.a30673ed.js",
     "static/js/453.07a6ab98.chunk.js": "/reactworks/static/js/453.07a6ab98.chunk.js",
     "static/media/pc-3.jpg": "/reactworks/static/media/pc-3.af9322658a201297980f.jpg",
     "static/media/pc-2.jpg": "/reactworks/static/media/pc-2.c49a73864ee3b077fe1c.jpg",
@@ -9,12 +9,12 @@
     "static/media/pc-5.jpg": "/reactworks/static/media/pc-5.fcae7b80e2942a352b10.jpg",
     "static/media/pc-1.jpg": "/reactworks/static/media/pc-1.49da0e8e0c1dc92ae4b2.jpg",
     "index.html": "/reactworks/index.html",
-    "main.33feb697.css.map": "/reactworks/static/css/main.33feb697.css.map",
-    "main.afd1af4f.js.map": "/reactworks/static/js/main.afd1af4f.js.map",
+    "main.accaf217.css.map": "/reactworks/static/css/main.accaf217.css.map",
+    "main.a30673ed.js.map": "/reactworks/static/js/main.a30673ed.js.map",
     "453.07a6ab98.chunk.js.map": "/reactworks/static/js/453.07a6ab98.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33feb697.css",
-    "static/js/main.afd1af4f.js"
+    "static/css/main.accaf217.css",
+    "static/js/main.a30673ed.js"
   ]
 }
