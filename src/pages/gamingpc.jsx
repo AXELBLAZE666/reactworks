@@ -12,9 +12,7 @@ function gamingpc() {
                     <div className='productdata'>
                     <Link to={`/gamingpc/${e.id}`}>
                         <img className='product-images' src={e.image} alt="" />
-                        <p>{e.id}</p>
                         <p>{e.name}</p>
-                        <p>{e.price}</p>
                     </Link>
                     </div>
                     

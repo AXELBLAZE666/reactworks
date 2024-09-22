@@ -35,7 +35,7 @@ function RouteHandler() {
           <Col sm={2}>
             <Sidenav />
           </Col>
-          <Col sm={10}>
+          <Col sm={10} >
             <Routes>
               <Route path='/dashboard' element={<Dashboard />} />
               <Route path='/home' element={<Home />} />

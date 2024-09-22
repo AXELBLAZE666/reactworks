@@ -11,9 +11,7 @@ function home() {
       return(
         <div className='productdata'>
           <img className='product-images' src={e.image} alt="" />
-          <p>{e.id}</p>
           <p>{e.name}</p>
-          <p>{e.price}</p>
           </div>
 
       )
