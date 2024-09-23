@@ -42,7 +42,6 @@ function RouteHandler() {
           </Col>
           <Col sm={10} >
             <Routes>
-              <Route path='/dashboard' element={<Dashboard />} />
               <Route path='/home' element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/contact' element={<Contact />} />
