@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Login from './components/login';
 import Register from './components/register';
-import Dashboard from './components/dashboard';
 import Home from './components/home';
 import About from './components/about';
 import Contact from './components/contact';
