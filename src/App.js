@@ -12,7 +12,6 @@ import Services from './components/services';
 import Gamingpc from './pages/gamingpc';
 import { Col, Row } from 'react-bootstrap';
 import Sidenav from './components/sidenav';
-import { ClassNames } from '@emotion/react';
 import SingleItem from './pages/singleitem';
 import Cart from './pages/cart';
 
@@ -30,6 +29,12 @@ function RouteHandler() {
 
   return (
     <div>
+      {isAuthPage && (
+        <Routes>
+          <Route path='/reactworks' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+        </Routes>
+      )}
       {!isAuthPage && (
         <Row>
           <Col sm={2}>
@@ -48,12 +53,6 @@ function RouteHandler() {
             </Routes>
           </Col>
         </Row>
-      )}
-      {isAuthPage && (
-        <Routes>
-          <Route path='/reactworks' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-        </Routes>
       )}
     </div>
   );

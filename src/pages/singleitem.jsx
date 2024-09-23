@@ -34,15 +34,17 @@ function SingleItem() {
   };
 
   return (
-    <div>
+    <div className='singleItem'>
+      <div>
       <img src={product.image} alt={product.name} />
+      </div>
       <div>
         <p>ID: {product.id}</p>
         <p>Name: {product.name}</p>
         <p>Price: {product.price}</p>
         <button onClick={addToCart}>Add to cart</button>
-        </div>
       </div>
+    </div>
   );
 }
 

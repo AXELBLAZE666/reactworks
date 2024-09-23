@@ -11,6 +11,7 @@ function home() {
       return(
         <div className='productdata'>
           <img className='product-images' src={e.image} alt="" />
+
           <p>{e.name}</p>
           </div>
 
@@ -19,7 +20,7 @@ function home() {
 
      })     
     }
-      <Link to='/gamingpc'> <p>View More</p> </Link> 
+      <Link className='viewmore' to='/gamingpc'> <p>View More</p> </Link> 
     </div>
   )
 }

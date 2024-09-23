@@ -1,29 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import { CartOutline } from 'react-ionicons';
 import '../App.css';
 
       function sidenav() {
+
+         const menuToggle = document.getElementById('menu-toggle');
+
+         if(menuToggle){
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+          const sideNav = document.querySelector('.sideNav');
+          sideNav.classList.toggle('active'); // Toggle sidebar visibility
+        });
+      }
+
         return (
           <>
-            <navbar>
-              <div className='sideNav'>
-                <div><h1 href="#home">Navbar</h1></div>
+            <nav className="sideNav">
+              <div className="menu-toggle" id="menu-toggle">
+                <span className='toogle'>☰</span>
+              </div>
+              <div className="nav-content">
+                <div>
+                  <h1><Link to="/home">Navbar</Link></h1>
+                </div>
                 <ul>
                   <li><Link to="/home">Home</Link></li>
                   <li><Link to="/about">About</Link></li>
-                  <li><Link to="/aervices">Services</Link></li>
+                  <li><Link to="/services">Services</Link></li>
                   <li><Link to="/contact">Contact</Link></li>
-                  <li></li>
                 </ul>
-                <div>
-                <Link to="/cart"><CartOutline color={'#ffffff'}/></Link>
-                <Link to='/reactworks'><h2>signout</h2></Link>
+                <div className="nav-icons">
+                  <Link to="/cart"><CartOutline color={'#ffffff'}/></Link>
+                  <Link to='/reactworks'><h2>Sign Out</h2></Link>
                 </div>
               </div>
-            </navbar>
+            </nav>
+
           </>
         );
       }
